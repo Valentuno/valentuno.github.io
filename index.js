@@ -87,6 +87,35 @@ input3.oninput = function() {
     document.getElementById("zl/g").textContent = oplacalnosc;
 }
 
+document.getElementById("finder").onclick = function() {
+    let tabela = document.getElementById("Tabela");
+    let rows = tabela.rows;
+    let alkohole = new Array;
+    let g = document.getElementById("zl/g").innerHTML;
+    let z;
+    for (z=1; z<(rows.length - 1);z++) {
+        alkohole.push({id:rows[z].cells[0].innerHTML,rent:parseFloat(rows[z].cells[3].innerHTML)})
+    }
+    let alkohole_odleglosc = new Array;
+    for (z=1; z<(rows.length -1);z++) {
+        alkohole_odleglosc.push({id:rows[z].cells[0].innerHTML,rent:Math.abs(g-parseFloat(rows[z].cells[3].innerHTML))})
+    }
+    alkohole_odleglosc.sort((a,b) => a.rent - b.rent);
+    // window.alert(alkohole_odleglosc[0].id)
+    // window.alert(rows[alkohole_odleglosc[0].id].cells[1].innerHTML.slice(9,-8))
+    document.getElementById("alternative-1-nazwa").textContent = rows[alkohole_odleglosc[0].id].cells[2].innerHTML;
+    let sorc = rows[alkohole_odleglosc[0].id].cells[1].innerHTML.slice(10,-9).toString();
+    document.getElementById("alternative-1-zdjecie").src = sorc.toString();
+    document.getElementById("alternative-1-rent").textContent = "G za 1zł = " + rows[alkohole_odleglosc[0].id].cells[3].innerHTML;
+    document.getElementById("alternative-1-cena").textContent = "Ocena = " + rows[alkohole_odleglosc[0].id].cells[3].innerHTML;
+    document.getElementById("alternative-2-nazwa").textContent = rows[alkohole_odleglosc[1].id].cells[2].innerHTML;
+    let sorc2 = rows[alkohole_odleglosc[1].id].cells[1].innerHTML.slice(10,-9).toString();
+    document.getElementById("alternative-2-zdjecie").src = sorc2.toString();
+    document.getElementById("alternative-2-rent").textContent = "G za 1zł = " + rows[alkohole_odleglosc[1].id].cells[3].innerHTML;
+    document.getElementById("alternative-2-cena").textContent = "Ocena = " + rows[alkohole_odleglosc[1].id].cells[3].innerHTML;
+    window.scrollTo(0,300);
+}
+
 
 
 

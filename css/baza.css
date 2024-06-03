@@ -100,14 +100,18 @@ nav a:hover{
     margin-top: 50px;
 }
 .column2 {
+    margin-top: 100px;
     width: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 .Tabela{
     width: 100%;
+    img {
+        width: 80px;
+    }
 }
 td {
     text-align: center;

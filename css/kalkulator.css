@@ -182,3 +182,20 @@ nav a:hover{
     text-align: center;
     cursor: pointer;
 }
+.Tabela {
+    display: none;
+}
+.alternatives {
+    display: flex;
+    justify-content: center;
+    .columnleft, .columnright {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img {
+        margin: 20px 0;
+        width: 150px;
+    }
+}

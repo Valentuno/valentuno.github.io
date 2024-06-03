@@ -287,19 +287,18 @@ document.getElementById("btn-wszystko").onclick = function() {
 // window.alert(alkohole_odleglosc);
 // // window.alert(alkohole.indexOf(Math.abs(g+alkohole_odleglosc[0])));
 
-let alkohole = new Array;
-// window.alert(alkohole[1].rent);
-let g = 12.5;
-let z;
-for (z=1; z<(rows.length - 1);z++) {
-    alkohole.push({id:rows[z].cells[0].innerHTML,rent:parseFloat(rows[z].cells[3].innerHTML)})
-}
-// for (z=1; z<alkohole.length;z++) {
-//     // window.alert(alkohole[z].id,alkohole[z].rent)
+// let alkohole = new Array;
+// let g = 12.5;
+// let z;
+// for (z=1; z<(rows.length - 1);z++) {
+//     alkohole.push({id:rows[z].cells[0].innerHTML,rent:parseFloat(rows[z].cells[3].innerHTML)})
 // }
-let alkohole_odleglosc = new Array;
-for (z=1; z<(rows.length -1);z++) {
-    alkohole_odleglosc.push({id:rows[z].cells[0].innerHTML,rent:Math.abs(g-parseFloat(rows[z].cells[3].innerHTML))})
-}
-alkohole_odleglosc.sort((a,b) => a.rent - b.rent);
-window.alert(alkohole_odleglosc[1].id)
+// let alkohole_odleglosc = new Array;
+// for (z=1; z<(rows.length -1);z++) {
+//     alkohole_odleglosc.push({id:rows[z].cells[0].innerHTML,rent:Math.abs(g-parseFloat(rows[z].cells[3].innerHTML))})
+// }
+// alkohole_odleglosc.sort((a,b) => a.rent - b.rent);
+// window.alert(alkohole_odleglosc[1].id)
+// window.alert(document.getElementById("zl/g").value);
+
+
