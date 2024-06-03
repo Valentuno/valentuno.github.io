@@ -226,4 +226,80 @@ filter4.onclick = function() {
     }
     
 }
+let h;
+document.getElementById("btn-piwo").onclick = function() {
+    document.getElementById("btn-wszystko").classList.remove("active-btn");
+    document.getElementById("btn-piwo").classList.remove("active-btn");
+    document.getElementById("btn-wodka").classList.remove("active-btn");
+    let piwo_list = document.getElementsByClassName("piwo");
+    for (h=0 ; h < piwo_list.length; h++) {
+        piwo_list[h].classList.remove("no-display")
+    }
+    let woda_list = document.getElementsByClassName("wodka");
+    for (h=0 ; h < woda_list.length; h++) {
+        woda_list[h].classList.add("no-display")
+    }
+    document.getElementById("btn-piwo").classList.add("active-btn");
+}
 
+document.getElementById("btn-wodka").onclick = function() {
+    document.getElementById("btn-wszystko").classList.remove("active-btn");
+    document.getElementById("btn-piwo").classList.remove("active-btn");
+    document.getElementById("btn-wodka").classList.remove("active-btn");
+    let woda_list = document.getElementsByClassName("wodka");
+    for (h=0 ; h< woda_list.length; h++) {
+        woda_list[h].classList.remove("no-display")
+    }
+    let piwo_list = document.getElementsByClassName("piwo");
+    for (h=0 ; h< piwo_list.length; h++) {
+        piwo_list[h].classList.add("no-display")
+    }
+    document.getElementById("btn-wodka").classList.add("active-btn");
+}
+
+document.getElementById("btn-wszystko").onclick = function() {
+    document.getElementById("btn-wszystko").classList.remove("active-btn");
+    document.getElementById("btn-piwo").classList.remove("active-btn");
+    document.getElementById("btn-wodka").classList.remove("active-btn");
+    let piwo_list = document.getElementsByClassName("piwo");
+    let woda_list = document.getElementsByClassName("wodka");
+    for (h=0 ; h< woda_list.length; h++) {
+        woda_list[h].classList.remove("no-display")
+    }
+    for (h=0 ; h < piwo_list.length; h++) {
+        piwo_list[h].classList.remove("no-display")
+    }
+    document.getElementById("btn-wszystko").classList.add("active-btn");
+}
+// let alkohole = new Array;
+// let g = 6;
+// let z;
+// for (z=1; z<(rows.length - 1);z++) {
+//     alkohole.push(parseFloat(rows[z].cells[3].innerHTML))
+// }
+// let alkohole_odleglosc = new Array;
+// for (z=1; z<(rows.length - 1);z++) {
+//     alkohole_odleglosc.push(Math.abs(g-parseFloat(rows[z].cells[3].innerHTML)))
+// }
+// // window.alert(alkohole.indexOf(10.07));
+// window.alert(alkohole_odleglosc);
+// alkohole_odleglosc.sort();
+// window.alert(alkohole_odleglosc);
+// // window.alert(alkohole.indexOf(Math.abs(g+alkohole_odleglosc[0])));
+
+let alkohole = new Array;
+// window.alert(alkohole[1].rent);
+let g = 12.5;
+let z;
+for (z=1; z<(rows.length - 1);z++) {
+    alkohole.push({id:rows[z].cells[0].innerHTML,rent:parseFloat(rows[z].cells[3].innerHTML)})
+}
+// for (z=1; z<alkohole.length;z++) {
+//     // window.alert(alkohole[z].id,alkohole[z].rent)
+// }
+let alkohole_odleglosc = new Array;
+for (z=1; z<(rows.length -1);z++) {
+    alkohole_odleglosc.push({id:rows[z].cells[0].innerHTML,rent:Math.abs(g-parseFloat(rows[z].cells[3].innerHTML))})
+}
+alkohole_odleglosc.sort((a,b) => a.rent - b.rent);
+window.alert(alkohole_odleglosc[1].id)

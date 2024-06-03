@@ -35,6 +35,7 @@ p{
 .wrap {
     width: 1140px;
     margin: auto;
+    display: flex;
 }
 .header-bg{
     background: #00174F;
@@ -94,3 +95,50 @@ nav a:hover{
     color: red;
 }
 
+.column1 {
+    width: 70%;
+    margin-top: 50px;
+}
+.column2 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Tabela{
+    width: 100%;
+}
+td {
+    text-align: center;
+    font-family: 'Kanit';
+    font-size: 14px;
+}
+th {
+    font-family: 'Kanit';
+    font-size: 18px;
+    padding: 5px;
+    cursor: pointer;
+}
+.no-cursor {
+    cursor: default;
+}
+.CTA {
+    background: #C11023;
+    padding: 10px 20px;
+    font-family: 'Poppins';
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    border-radius: 10px;
+    width: 50%;
+    margin: 20px 0;
+    text-align: center;
+    cursor: pointer;
+}
+.CTA:hover{
+    background: #00174F;
+}
+.active-btn {
+    background:#00174F ;
+}
