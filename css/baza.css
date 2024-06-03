@@ -1,0 +1,96 @@
+body{
+    background-color: #eeeadc;
+    margin: 0;
+    padding-bottom: 150px;
+}
+
+h1{
+    font-family: 'Kanit';
+    font-size: 50px;
+    color: black;
+    margin: 0;
+}
+h2 {
+    font-family: 'Kanit';
+    font-size: 35px;
+    color: black;
+    margin: 0;
+}
+h4 {
+    font-family: 'Kanit';
+    font-size: 25px;
+    color: black;
+    margin: 0; 
+}
+subheading {
+    font-family: 'Poppins';
+    font-size: 20px;
+    margin: 0;
+}
+p{
+    font-family: 'Poppins';
+    margin: 0;
+}
+
+.wrap {
+    width: 1140px;
+    margin: auto;
+}
+.header-bg{
+    background: #00174F;
+}
+header{
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    
+}
+.header-left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 700px;
+    .name {
+        color: white;
+        font-family: 'Poppins';
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+
+nav ul{
+    list-style: none;
+    display: flex;
+    font-family: 'Kanit';
+    font-size: 20px;
+    font-weight: 600;
+}
+nav ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+}
+nav a:hover{
+    color: red;
+}
+.baza-menu {
+    color: red;
+}
+.divider{
+    border-left: 2px solid white;
+    height: 30px;
+}
+
+.no-display {
+    display: none;
+}
+.active-filter {
+    color: red;
+}
+
